@@ -1,6 +1,6 @@
 {
   "name": "Ubuntu Desktop with Chrome",
-  "image": "://microsoft.com",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
@@ -8,7 +8,6 @@
     },
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
-  "forwardPorts": [6080],
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget && wget -q https://google.com && sudo apt-get install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget && wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt-get install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb",
   "remoteUser": "vscode"
 }
